@@ -1,74 +1,97 @@
+.site-header {
+    /* Zajistí kompaktnější vzhled na mobilu */
+    padding: 1rem; 
+    align-items: center;
+}
+
+/* Skryjeme desktopový search bar, protože na mobilu je schovaný v samostatné liště */
+.search-bar {
+    /* Standardně skrytý (dokud se nepřidá třída .is-open) */
+    display: none; 
+}
+
+/* Skryjeme normální navigaci (která je na desktopu viditelná) */
+.primary-navigation {
+    display: none; /* Klíčové: Standardně skryté */
+    
+    /* Nastavení pro zobrazení, když je aktivní */
+    position: absolute; /* Nebo fixed, pro stabilní pozici */
+    top: 60px; /* Pod headerem */
+    left: 0;
+    width: 100%; /* Plná šířka */
+    background-color: #333;
+    z-index: 998;
+}
+
+
+/* ---------------------------------------------------- */
+/* 2. Styly pro Hamburger Menu (Přepínání display) */
+/* ---------------------------------------------------- */
+
+/* Zobrazení tlačítka hamburgeru (které bylo na desktopu skryté) */
 .nav-button {
     display: block; 
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
     z-index: 1000;
     margin-right: 15px;
 }
 
-.primary-navigation {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100%;
-    background-color: #222;
-    padding-top: 5rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-out;
-    z-index: 9999;
-    display: none; 
-    visibility: hidden;
+/* Zobrazení menu po kliknutí (okamžité) */
+.primary-navigation.is-open {
+    display: block; /* Okamžitě se zobrazí */
 }
 
-.primary-navigation.is-open {
-    transform: translateX(0) !important; 
-    visibility: visible;
+/* Vertikální formát listu položek (uvnitř navigace) */
+.nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0rem;
+    margin: 0;
 }
+
+/* V souboru mobile.css */
 
 .nav-list a {
-    display: block;
-    width: 100%;
+    /* Ujistěte se, že toto je stále nastaveno */
+    display: flex;
+    align-items: center;
     padding: 1rem 2rem;
+    line-height: normal; 
+    
+    /* Přidaná pravidla pro odstranění chyb vykreslování textu */
+    vertical-align: baseline; /* I když je display: flex, zkusíme to */
+    font-size: 1rem; /* Vynutit standardní velikost */
+    margin: 0 !important; /* Vynucené odstranění marginu */
+    
+    /* Vynulování mezery kolem textu (pokud je to inline prvek) */
+    text-decoration: none;
+    text-indent: 0;
+
+    border-top: 1px solid #444;
     border-bottom: 1px solid #444;
 }
 
-.nav-div {
-    display: flex;
-    align-items: center;
-    width: auto; 
-}
 
+/* ---------------------------------------------------- */
+/* 3. Styly pro Search Bar (Přepínání display) */
+/* ---------------------------------------------------- */
+
+/* Zobrazení ikony pro vyhledávání (která byla na desktopu skrytá) */
 .search-button {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+    display: block; 
     z-index: 1000;
-    padding: 0;
 }
 
-.search-bar {
-    display: none;
+/* Zobrazení search baru po kliknutí (okamžité) */
+.search-bar.is-open {
+    display: flex; /* Okamžitě se zobrazí jako lišta */
+    
+    /* Zajištění, že se správně roztáhne */
     position: absolute; 
-    top: 60px;
+    top: 60px; 
     left: 0;
     width: 100%;
     padding: 10px;
-    background-color: #444;
+    background-color: #111;
     box-sizing: border-box;
-}
-
-.search-bar.is-open {
-    display: flex;
-    justify-content: center;
-}
-
-.search-input {
-    flex-grow: 1;
+    z-index: 997; /* Nižší než menu */
 }

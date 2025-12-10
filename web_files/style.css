@@ -7,12 +7,12 @@ body {
     justify-content: space-between; 
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #333;
-    color: white;
+    background-color: #E5FFC7;
+    color: #5D4B4B;
 }
 
 .logo {
-    color: white;
+    color: #5D4B4B;
     text-decoration: none;
     font-size: 1.5rem;
 }
@@ -30,14 +30,14 @@ body {
 }
 
 .nav-list a {
-    color: white;
+    color: #5D4B4B;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-list a:hover {
-    background-color: #555;
+    color: #110e0e;
 }
 
 .nav-div {
@@ -65,15 +65,15 @@ body {
 
 .search-input {
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #5D4B4B;
     border-radius: 4px 0 0 4px;
 }
 
 .search-submit {
     padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
-    border: 1px solid #007bff;
+    background-color: #FFC7C5;
+    color: #5D4B4B;
+    border: 1px solid #FFC7C5;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
