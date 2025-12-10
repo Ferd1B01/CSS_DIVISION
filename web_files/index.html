@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>PillHub</title>
     <link rel="icon" type="image/x-icon" href="source/favicon.ico">
-    <style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width: 768px)">
+   <!--
+   <style>
         body {
             margin: 0;
         }
@@ -29,28 +32,39 @@
             text-decoration: none;
         }
     </style>
+    -->
 </head>
 <body>
-    <header>
-        <img src="source/logo_obdelnik.png" alt="logo" width="508" height="147" style="display: block; margin-left: auto; margin-right: auto; width: 30%">
+    <header class="site-header">
+        <a href="/" class="logo">Rainbow Clinic</a>
+        
+        <div class="nav-div">
+            <button class="nav-button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="hamburger-icon"></span>
+            </button>
 
-        <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            <!--
-            Předělat na ikony a dát někam jinam
+            <nav class="primary-navigation" id="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="index.html">Pricing</a></li>
+                    <li><a href="index.html">Booking</a></li>
+                    <li><a href="index.html">Reviews</a></li>
+                    <li><a href="index.html">Contacts</a></li>
+                </ul>
+            </nav>
 
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
-                <a href="cart.html">Cart</a>
-                <a href="order.html">Order</a>
-                <a href="profile.html">Profile</a>
-            -->
-        </nav>
-        <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">
-            <img src="source/hamburger.svg" alt="hamburger menu">
-        </a>
+            <div class="search-section">
+                <button class="search-button">
+                    <span class="search-icon"></span>
+                </button>
+
+                <div class="search-bar" id="search-bar">
+                    <input type="search" placeholder="Search..." class="search-input">
+                    <button type="submit" class="search-submit">Search</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
