@@ -425,20 +425,20 @@ aside.hero-image-container {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.review-card .stars {
+.stars {
     color: gold;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.review-card .review-text {
+.review-text {
     font-style: italic;
     color: #5D4B4B;
     margin-bottom: 15px;
     line-height: 1.6;
 }
 
-.review-card .reviewer-name {
+.reviewer-name {
     font-weight: bold;
     color: #5D4B4B;
     font-size: 0.9rem;
@@ -816,4 +816,26 @@ select {
 .booking-link:hover {
     background-color: #004d40;
     transform: translateY(-2px);
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    
+    /* Vytvoření responzivní mřížky */
+    display: grid;
+    /* Automaticky vytvoří sloupce, min. šířka 300px, max. 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+.review-card-green {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #ff9800; /* Oranžová lišta pro zvýraznění */
+    display: flex; /* Pro zarovnání obsahu */
+    flex-direction: column;
 }
