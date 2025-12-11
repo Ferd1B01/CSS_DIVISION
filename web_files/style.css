@@ -848,18 +848,18 @@ select {
 
 .search-header {
     margin-bottom: 25px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #715c5c;
     padding-bottom: 15px;
 }
 
 .search-header h2 {
-    color: #00796b;
+    color: #715c5c;
     font-size: 1.8em;
     margin-bottom: 5px;
 }
 
 .search-header p {
-    color: #555;
+    color: #715c5c;
     font-size: 0.9em;
 }
 
@@ -880,7 +880,7 @@ select {
 /* Cesta/URL */
 .result-path {
     font-size: 0.85em;
-    color: #008060; /* Zelený odstín pro URL */
+    color: #715c5c; /* Zelený odstín pro URL */
     margin: 0 0 5px 0;
 }
 
@@ -892,12 +892,12 @@ select {
 .result-title h3 {
     margin: 0 0 8px 0;
     font-size: 1.3em;
-    color: #004d40;
+    color: #91af6a;
     text-decoration: underline;
 }
 
 .result-title:hover h3 {
-    color: #00796b; /* Mírná změna barvy při najetí myší */
+    color: #5b6e43; /* Mírná změna barvy při najetí myší */
 }
 
 .result-title {
@@ -919,8 +919,8 @@ select {
 /* Tagy */
 .result-tags span {
     display: inline-block;
-    background-color: #e6f7ff; /* Světle modrá pozadí */
-    color: #006080;
+    background-color: #acbf94; /* Světle modrá pozadí */
+    color: #000000;
     padding: 3px 8px;
     border-radius: 3px;
     font-size: 0.75em;
