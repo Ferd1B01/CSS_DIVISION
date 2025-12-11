@@ -299,3 +299,11 @@ aside.hero-image-container {
     .reviews-header h1 {
         font-size: 2em;
     }
+
+    .search-header h2 {
+        font-size: 1.5em;
+    }
+
+    .result-title h3 {
+        font-size: 1.1em;
+    }

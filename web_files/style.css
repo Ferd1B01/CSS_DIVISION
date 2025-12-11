@@ -839,3 +839,91 @@ select {
     display: flex; /* Pro zarovnání obsahu */
     flex-direction: column;
 }
+
+.search-page-wrapper {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.search-header {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.search-header h2 {
+    color: #00796b;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.search-header p {
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* --- Kontejner výsledků --- */
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.search-result-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Cesta/URL */
+.result-path {
+    font-size: 0.85em;
+    color: #008060; /* Zelený odstín pro URL */
+    margin: 0 0 5px 0;
+}
+
+.result-path i {
+    margin-right: 5px;
+}
+
+/* Název výsledku (klikatelný odkaz) */
+.result-title h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.3em;
+    color: #004d40;
+    text-decoration: underline;
+}
+
+.result-title:hover h3 {
+    color: #00796b; /* Mírná změna barvy při najetí myší */
+}
+
+.result-title {
+    text-decoration: none;
+}
+
+/* Popisek/Snippet */
+.result-snippet {
+    font-size: 0.95em;
+    color: #555;
+    margin: 0 0 10px 0;
+}
+
+.result-snippet strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tagy */
+.result-tags span {
+    display: inline-block;
+    background-color: #e6f7ff; /* Světle modrá pozadí */
+    color: #006080;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    margin-right: 5px;
+    margin-top: 5px;
+}
