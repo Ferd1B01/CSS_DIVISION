@@ -123,3 +123,16 @@
     border-radius: 0 4px 4px 0; /* Rohy jen vpravo */
     /* ... ostatní styly pro barvu pozadí atd. ... */
 }
+
+.footer-container {
+    flex-direction: column; 
+}
+
+.footer-column {
+    flex: 1 1 100%; /* Plná šířka na mobilu */
+    margin-bottom: 30px;
+}
+    
+.footer-column:last-child {
+    margin-bottom: 0;
+}

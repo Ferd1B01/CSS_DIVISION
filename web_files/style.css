@@ -79,3 +79,78 @@ body {
     border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
+
+.site-footer {
+    background-color: #2c2c2c; /* Tmavé pozadí pro kliniku */
+    color: #cccccc;
+    padding: 40px 0 0; /* Odsazení nahoře, dole bude copyright lišta */
+    font-size: 0.9rem;
+}
+
+/* Kontejner pro sloupce */
+.footer-container {
+    max-width: 1200px; /* Omezení šířky na desktopu */
+    margin: 0 auto;
+    padding: 0 20px 30px; /* Vnitřní odsazení */
+    
+    /* Vzhled pro Desktop (Flexbox Grid) */
+    display: flex;
+    flex-wrap: wrap; /* Umožní sloupce na malých obrazovkách zalomit */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    /* Každý sloupec zabere cca 25% šířky, ale s flex-grow se přizpůsobí */
+    flex: 1 1 200px; 
+    margin-bottom: 20px;
+}
+
+.site-footer h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #555; /* Oddělovač */
+    padding-bottom: 5px;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer a {
+    color: #aaaaaa;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Styly pro sociální ikony */
+.social-icons a {
+    display: inline-block;
+    background-color: #555;
+    color: white;
+    padding: 5px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #007bff; /* Modrý hover efekt */
+}
+
+/* Copyright lišta */
+.footer-bottom {
+    background-color: #222;
+    color: #888;
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid #444;
+}
