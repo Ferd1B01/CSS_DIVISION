@@ -656,7 +656,7 @@ select {
     font-weight: bold;
 }
 
-.hours-table tbody tr:hover {
+.hours-table tbody tr:hover {-
     background-color: #dab3b3;
 }
 
@@ -708,7 +708,7 @@ select {
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    background: #fff;
+    background-color: #fce4e4;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -717,7 +717,7 @@ select {
 
 .description-block i {
     font-size: 2.5em;
-    color: #00796b;
+    color: #fce4e4;;
     flex-shrink: 0; /* Ikona se nesmí zmenšit */
     padding-top: 5px;
 }
@@ -734,8 +734,8 @@ select {
 
 /* --- Seznam Služeb --- */
 .service-points h2 {
-    color: #00796b;
-    border-bottom: 2px solid #b2dfdb;
+    color: #5D4B4B;
+    border-bottom: 2px solid #333333;
     padding-bottom: 8px;
     margin-bottom: 20px;
     font-size: 1.5em;
@@ -752,7 +752,7 @@ select {
 .service-points li {
     background: #ffffff;
     padding: 15px;
-    border-left: 4px solid #00796b;
+    border-left: 4px solid #5D4B4B;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -799,22 +799,22 @@ select {
 }
 
 .price-link {
-    background-color: #ff9800; /* Oranžová pro ceník */
+    background-color: #cda7a7; /* Oranžová pro ceník */
     color: #333;
 }
 
 .price-link:hover {
-    background-color: #f57c00;
+    background-color: #5D4B4B;
     transform: translateY(-2px);
 }
 
 .booking-link {
-    background-color: #00796b; /* Teal pro rezervaci */
+    background-color: #91af6a; /* Teal pro rezervaci */
     color: white;
 }
 
 .booking-link:hover {
-    background-color: #004d40;
+    background-color: #5b6e43;
     transform: translateY(-2px);
 }
 
