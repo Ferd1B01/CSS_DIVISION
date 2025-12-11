@@ -534,12 +534,12 @@ select {
 
 .cenik-container {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0 15px;
 }
 
 .kategorie {
-    background-color: #ffffff;
+    background-color: #E5FFC7;
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 8px;
@@ -547,8 +547,7 @@ select {
 }
 
 .kategorie h2 {
-    color: #00796b;
-    border-bottom: 2px solid #b2dfdb;
+    color: #000000;
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 1.8em;
@@ -560,7 +559,6 @@ select {
     justify-content: space-between; /* Zajistí oddělení názvu a ceny */
     align-items: center;
     padding: 12px 0;
-    border-bottom: 1px dashed #eee; /* Slabá oddělovací linka pro jednotlivé položky */
     font-size: 1.1em;
 }
 
@@ -573,14 +571,13 @@ select {
     flex-basis: 20%; /* Cena zabere 20% prostoru, zarovnána vpravo */
     text-align: right;
     font-weight: bold;
-    color: #00796b; /* Barva ceny */
+    color: #000000; /* Barva ceny */
 }
 
 /* KLÍČOVÝ PRVEK: Tečkovaná čára/oddělovač */
 .cara {
     flex-grow: 1; /* KLÍČOVÉ! Čára vyplní veškerý zbývající prostor */
-    border-bottom: 1px dotted #ccc; /* Tečkovaná čára jako oddělovač */
-    margin: 0 15px; /* Mezera od textu */
+    border-bottom: 2px dotted #000000; /* Tečkovaná čára jako oddělovač */
     height: 1px; /* Výška čáry */
 }
 
