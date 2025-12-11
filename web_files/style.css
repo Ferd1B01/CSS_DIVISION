@@ -443,13 +443,15 @@ aside.hero-image-container {
 }
 
 .booking-container {
-    background: #fff;
+    background: #E5FFC7;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px; /* Maximální šířka formuláře */
     width: 80%; /* Responzivní šířka */
     display: block;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .confirmation-hidden {
@@ -485,8 +487,8 @@ select {
 }
 
 .booking-submit-btn {
-    background-color: #007bff;
-    color: white;
+    background-color: #fce4e4;
+    color: black;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -497,7 +499,7 @@ select {
 }
 
 .booking-submit-btn:hover {
-    background-color: #0056b3;
+    background-color: #bdabab;
 }
 
 /* Styly pro potvrzovací zprávu */
@@ -519,13 +521,13 @@ select {
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: #6c757d;
-    color: white;
+    background-color: #fce4e4;
+    color: black;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .home-btn:hover {
-    background-color: #5a6268;
+    background-color: #bdabab;
 }
