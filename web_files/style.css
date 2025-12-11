@@ -1,79 +1,259 @@
-body {
-    margin: 0;
+/* styles.css
+   Pixel-accurate desktop layout + responsive stacking on mobile (verze C).
+   Design vychází z nahraného PDF / screenshotu. :contentReference[oaicite:1]{index=1}
+*/
+
+/* ---------- font-face (vložit svoje .woff2 do fonts/ pokud máš) ---------- */
+@font-face {
+    font-family: "Garbata";
+    src: url("fonts/GarbataTrial-Regular.ttf") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Garbata";
+    src: url("fonts/GarbataTrial-Bold.ttf") format("woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "TT Chocolate";
+    src: url("fonts/TT-chocolates-regular.otf") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "TT Chocolate";
+    src: url("fonts/TT-chocolates-demibold.otf") format("woff2");
+    font-weight: 600;
 }
 
-.site-header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #E5FFC7;
-    color: #5D4B4B;
+/* ---------- variables (přiblížení barev z designu) ---------- */
+:root{
+    --pink: #F7C9C7;        /* main pink block */
+    --pink-strong: #F3BFC0; /* inner pink tone */
+    --green: #E4F9D4;       /* mint green block */
+    --beige: #F8F3EE;       /* page background sections */
+    --accent: #D86E6E;      /* coral/pink headings */
+    --muted: #6B6B6B;
+    --maxw: 1050px;
+    --gap: 28px;
 }
 
-.logo {
-    color: #5D4B4B;
-    text-decoration: none;
-    font-size: 1.5rem;
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+    font-family: "TT Chocolate", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background: var(--beige);
+    color: #222;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+    padding:20px;
 }
 
-.nav-button {
-    display: none;
+/* wrapper */
+.site{max-width:var(--maxw);margin:0 auto;}
+
+/* Common elements */
+h1,h2,h3{margin:0}
+h1{font-family:"Garbata", Georgia, serif;}
+h2,h3{font-family:"Garbata", Georgia, serif;color:var(--accent)}
+
+/* Buttons */
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:24px;
+    font-weight:600;
+}
+.btn.primary{
+    background:#DFF9C7; /* mint pill */
+    color:#5a2f2f;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.btn.ghost{
+    background:transparent;
+    color:var(--accent);
+    border:1px solid rgba(0,0,0,0.05);
 }
 
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; 
-    gap: 20px;
+/* ---------------- HERO (2x2 grid) ---------------- */
+.hero{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 420px 260px; /* desktop fixed rows to get pixel-perfect feel */
+    gap:0;
+    overflow:hidden;
+    border-radius:6px;
+    margin-bottom:28px;
 }
 
-.nav-list a {
-    color: #5D4B4B;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
+/* left big pink (covers both rows) */
+.hero-left{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background: var(--pink);
+    padding:54px 48px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.logo{
+    width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#ffd1d1,#ffd7b8);
+    display:flex;align-items:center;justify-content:center;font-size:18px;
+}
+.brand-name{font-family:"Garbata";font-weight:700;color:#6b2d2d}
+.brand-sub{font-size:12px;color:var(--muted)}
+
+.hero-left h1{
+    font-size:44px;
+    color:#5a2f2f;
+    line-height:1.02;
+}
+.lead{color:var(--muted);font-size:16px;max-width:48ch}
+
+/* top-right big image */
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-.nav-list a:hover {
-    color: #110e0e;
+/* mid-left image (below left pink block visually aligned in grid) */
+.hero-image-2{
+    grid-column:1 / 2;
+    grid-row:2 / 3;
+    min-height:260px;
 }
 
-.nav-div {
-    display: flex;
-    align-items: center;
+/* right green text card */
+.hero-right{
+    grid-column:2 / 3;
+    grid-row:2 / 3;
+    background: var(--green);
+    padding:48px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.hero-right h2{font-size:34px;margin-bottom:8px}
+.hero-right p{color:var(--muted);font-size:15px;margin-bottom:14px}
+
+/* placeholder generic */
+.placeholder{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#7d7d7d;
+    font-weight:600;
+    font-size:18px;
+    background: linear-gradient(180deg,#eee,#f6f6f6);
+    border-left:1px solid rgba(0,0,0,0.02);
+    border-right:1px solid rgba(0,0,0,0.02);
 }
 
-.primary-navigation {
-    display: block; 
+/* ---------------- FEATURES ---------------- */
+.features-intro{
+    background:var(--beige);
+    padding:36px 20px;
+    border-radius:6px;
+    margin-bottom:28px;
+}
+.features-intro h2{font-size:32px;color:var(--accent);margin-bottom:16px}
+.features-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.feature{padding:8px}
+.feature .icon{color:#c3f2b6;font-size:22px;margin-bottom:6px}
+.feature h3{font-size:18px;color:#c75b5b;margin-bottom:8px}
+.feature p{color:var(--muted);font-size:14px;max-width:36ch}
+
+/* ---------------- SERVICES ---------------- */
+.services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    margin-bottom:28px;
+}
+.card-pink{background:var(--pink-strong);padding:44px}
+.card-pink h2{font-size:30px;color:#5a2f2f;margin-bottom:12px}
+.card-pink ul{margin-left:18px;color:var(--muted)}
+
+/* right placeholder image for services */
+.services-right{min-height:360px}
+
+/* ---------------- TEETH CLEANING ---------------- */
+.teeth-cleaning{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    margin-bottom:28px;
+}
+.tc-left{min-height:400px}
+.card-green{background:var(--green);padding:48px}
+.card-green h3{font-size:30px;color:#c75b5b;margin-bottom:10px}
+.card-green p{color:var(--muted);margin-bottom:18px}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonials{
+    background:var(--beige);
+    padding:40px 20px;
+    border-radius:8px;
+    text-align:center;
+    margin-bottom:28px;
+}
+.testimonials h2{font-size:34px;color:#c75b5b;margin-bottom:6px}
+.testimonials .sub{color:var(--muted);margin-bottom:22px}
+.test-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:12px;
+    align-items:start;
+}
+.test-item{padding:8px}
+.avatar{
+    width:120px;height:120px;border-radius:999px;margin:0 auto 14px;
+    display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff,#f6f6f6);
+    color:#777;font-weight:700;
+}
+.test-item blockquote{font-style:italic;color:#666;margin-bottom:10px}
+.test-item figcaption{color:#d98b8b}
+
+/* ---------------- FOOTER ---------------- */
+.site-footer{background:linear-gradient(180deg,#fff,#fcfbfb);padding:28px;border-radius:8px;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;margin-bottom:12px}
+.site-footer h3{font-family:"Garbata";color:#c75b5b}
+
+/* ---------------- Responsive: stack & fluid rules ---------------- */
+@media (max-width:980px){
+    /* stack hero rows on narrow screens; preserve relative ordering */
+    .hero{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .hero-left{grid-row:1;padding:28px}
+    .hero-image-1, .hero-image-2, .hero-right{grid-row:auto;min-height:200px}
+    .services, .teeth-cleaning{grid-template-columns:1fr}
+    .features-row{grid-template-columns:repeat(2,1fr)}
+    .test-row{grid-template-columns:repeat(2,1fr)}
+    .footer-inner{flex-direction:column}
 }
 
-.search-section {
-    margin-left: 20px;
-    display: flex; 
-    align-items: center;
-}
-
-.search-button {
-    display: none;
-}
-
-.search-bar {
-    display: flex;
-}
-
-.search-input {
-    padding: 8px;
-    border: 1px solid #5D4B4B;
-    border-radius: 4px 0 0 4px;
-}
-
-.search-submit {
-    padding: 8px 15px;
-    background-color: #FFC7C5;
-    color: #5D4B4B;
-    border: 1px solid #FFC7C5;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
+@media (max-width:560px){
+    body{padding:14px}
+    .hero-left{padding:20px}
+    .hero-left h1{font-size:28px}
+    .hero-right h2{font-size:22px}
+    .card-pink{padding:28px}
+    .card-green{padding:28px}
+    .features-row{grid-template-columns:1fr}
+    .test-row{grid-template-columns:1fr}
+    .avatar{width:96px;height:96px}
 }

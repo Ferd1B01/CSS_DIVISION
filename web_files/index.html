@@ -1,74 +1,148 @@
-<!DOCTYPE html>
-<html lang="cz" xmlns="http://www.w3.org/1999/html">
+<!doctype html>
+<html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PillHub</title>
-    <link rel="icon" type="image/x-icon" href="source/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width: 768px)">
-   <!--
-   <style>
-        body {
-            margin: 0;
-        }
-        header {
-            background-color: #0A0909;
-            overflow: hidden;
-            position: relative;
-        }
-
-        header nav {
-            display: none;
-
-        }
-
-        header a:link{
-            color:#FFFF;
-            text-decoration: none;
-            cursor: auto;
-        }
-        header a:visited{
-            color:#FF8700;
-            text-decoration: none;
-        }
-    </style>
-    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rainbow Clove Dental Clinic</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <a href="index.html" class="logo">Rainbow Clove</a>
-        
-        <div class="nav-div">
-            <button class="nav-button" aria-expanded="false" aria-controls="primary-navigation">
-                <span class="hamburger-icon">dx</span>
-            </button>
-
-            <nav class="primary-navigation" id="primary-navigation">
-                <ul class="nav-list">
-                    <li><a href="index.html"><b>Home</b></a></li>
-                    <li><a href="index.html">Services</a></li>
-                    <li><a href="index.html">Pricing</a></li>
-                    <li><a href="index.html">Booking</a></li>
-                    <li><a href="index.html">Reviews</a></li>
-                    <li><a href="index.html">Contacts</a></li>
-                </ul>
-            </nav>
-
-            <div class="search-section">
-                <button class="search-button">
-                    <span class="search-icon">xd</span>
-                </button>
-
-                <div class="search-bar" id="search-bar">
-                    <input type="search" placeholder="Search..." class="search-input">
-                    <button type="submit" class="search-submit">Search</button>
+<div class="site">
+    <!-- HERO (2x2 grid like screenshot) -->
+    <header class="hero" role="banner" aria-label="Hlavní sekce">
+        <div class="hero-left">
+            <div class="brand">
+                <div class="logo">🌈</div>
+                <div class="brand-text">
+                    <div class="brand-name">Rainbow Clove</div>
+                    <div class="brand-sub">Dental Clinic</div>
                 </div>
             </div>
+
+            <h1>Your dental<br/>health journey<br/>begins here.</h1>
+            <p class="lead">Our job is to make it as comfortable and pain-free as possible!</p>
+            <a class="btn primary" href="#">Get Started</a>
+        </div>
+
+        <div class="hero-image hero-image-1" aria-hidden="true">
+            <img src="images/hero_topright.png" alt="A smiling woman"/>
+        </div>
+
+        <div class="hero-image hero-image-2" aria-hidden="true">
+            <img src="images/hero_botleft.png" alt="A woman with a smile"/>
+        </div>
+
+        <div class="hero-right card-green">
+            <h2>We're passionate about dental care.</h2>
+            <p>Write a paragraph that talks about your dental practice here. Convince your prospective clients to choose you and your clinic for their dental needs by talking about your philosophy or your background.</p>
+            <a class="btn ghost" href="#">Learn More</a>
         </div>
     </header>
 
-     <script src="headerScript.js"></script>
-</body>
+    <!-- FEATURES -->
+    <section class="features-intro">
+        <h2>We take pride in how we do our work.</h2>
+        <div class="features-row">
+            <article class="feature">
+                <div class="icon">✳</div>
+                <h3>We are patient-focused.</h3>
+                <p>Share what makes your business unique to set you apart from your competition.</p>
+            </article>
+            <article class="feature">
+                <div class="icon">✳</div>
+                <h3>We value quality service.</h3>
+                <p>Share what makes your business unique to set you apart from your competition.</p>
+            </article>
+            <article class="feature">
+                <div class="icon">✳</div>
+                <h3>We care about comfort.</h3>
+                <p>Share what makes your business unique to set you apart from your competition.</p>
+            </article>
+        </div>
+    </section>
 
+    <!-- SERVICES (2-column) -->
+    <section class="services">
+        <div class="services-left card-pink">
+            <h2>We offer a wide range of dental services.</h2>
+            <ul>
+                <li>Share your offerings as bullet points</li>
+                <li>You can list them all here</li>
+                <li>Share your offerings as bullet points</li>
+                <li>You can list them all here</li>
+            </ul>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+            <img src="images/services_right.png" alt="A woman dentist"/>
+        </div>
+    </section>
+
+    <!-- TEETH CLEANING -->
+    <section class="teeth-cleaning">
+        <div class="tc-left placeholder" aria-hidden="true">IMAGE</div>
+        <div class="tc-right card-green">
+            <h3>Teeth Cleaning</h3>
+            <p>Highlight specific services or products that are unique to your business here. Give it room to shine here.</p>
+            <a class="btn primary" href="#">Book an appointment</a>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h2>We value our patients.</h2>
+        <p class="sub">We're happy to hear about their experience with us!</p>
+
+        <div class="test-row">
+            <figure class="test-item">
+                <div class="avatar placeholder-circle">A</div>
+                <blockquote>"Boost your product and service's credibility by adding testimonials from your clients."</blockquote>
+                <figcaption>Stella Ornelas</figcaption>
+            </figure>
+            <figure class="test-item">
+                <div class="avatar placeholder-circle">M</div>
+                <blockquote>"Boost your product and service's credibility by adding testimonials from your clients."</blockquote>
+                <figcaption>Maximillion West</figcaption>
+            </figure>
+            <figure class="test-item">
+                <div class="avatar placeholder-circle">E</div>
+                <blockquote>"Boost your product and service's credibility by adding testimonials from your clients."</blockquote>
+                <figcaption>Elliot Sterling</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <h3>We'd love to hear from you.</h3>
+                <p>Government prescribed health protocols are observed.</p>
+                <address>
+                    123 Anywhere St.<br/>
+                    Any City, ST 12345
+                </address>
+            </div>
+
+            <div class="footer-right">
+                <p><strong>Tel:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> hello@reallygreatsite.com</p>
+                <p><strong>Social:</strong> @reallygreatsite</p>
+            </div>
+        </div>
+        <div class="copyright">© Rainbow Clove Dental Clinic</div>
+    </footer>
+</div>
+
+<script>
+    // Smooth internal nav scrolling (optional)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{
+            const href = a.getAttribute('href');
+            if (!href || href === '#') return;
+            e.preventDefault();
+            document.querySelector(href)?.scrollIntoView({behavior:'smooth', block:'start'});
+        });
+    });
+</script>
+</body>
 </html>
