@@ -266,4 +266,32 @@ aside.hero-image-container {
         font-size: 2em;
         margin: 0 10px;
     }
+
+    .service-header h1 {
+        font-size: 1.8em;
+    }
+
+    .description-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description-block i {
+        margin-bottom: 10px;
+        padding-top: 0;
+    }
     
+    .service-points ul {
+        grid-template-columns: 1fr; /* Jeden sloupec pro služby na mobilu */
+    }
+
+    .cta-buttons {
+        flex-direction: column; /* Tlačítka pod sebe */
+        gap: 15px;
+    }
+    
+    .cta-link {
+        width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+    }
