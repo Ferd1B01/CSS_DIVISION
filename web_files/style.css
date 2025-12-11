@@ -529,3 +529,56 @@ select {
 .home-btn:hover {
     background-color: #5a6268;
 }
+
+.cenik-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.kategorie {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.kategorie h2 {
+    color: #00796b;
+    border-bottom: 2px solid #b2dfdb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Základní rozvržení položky pomocí Flexboxu */
+.polozka {
+    display: flex;
+    justify-content: space-between; /* Zajistí oddělení názvu a ceny */
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee; /* Slabá oddělovací linka pro jednotlivé položky */
+    font-size: 1.1em;
+}
+
+.nazev {
+    flex-basis: 60%; /* Název zabere 60% prostoru */
+    padding-right: 15px;
+}
+
+.cena {
+    flex-basis: 20%; /* Cena zabere 20% prostoru, zarovnána vpravo */
+    text-align: right;
+    font-weight: bold;
+    color: #00796b; /* Barva ceny */
+}
+
+/* KLÍČOVÝ PRVEK: Tečkovaná čára/oddělovač */
+.cara {
+    flex-grow: 1; /* KLÍČOVÉ! Čára vyplní veškerý zbývající prostor */
+    border-bottom: 1px dotted #ccc; /* Tečkovaná čára jako oddělovač */
+    margin: 0 15px; /* Mezera od textu */
+    height: 1px; /* Výška čáry */
+}
+

@@ -215,3 +215,31 @@ aside.hero-image-container {
 .container {
     padding: 20px 15px;
 }
+
+.kategorie h2 {
+        font-size: 1.5em;
+    }
+
+    /* Na malých obrazovkách skrýt tečkovanou čáru a srovnat položky pod sebe */
+    .polozka {
+        flex-direction: column; /* Skládání pod sebe */
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .nazev, .cena {
+        flex-basis: 100%; /* Plná šířka pro oba prvky */
+        padding-right: 0;
+        margin: 2px 0;
+    }
+
+    /* Čáru na mobilu skryjeme, aby se položky nevrstvil divně */
+    .cara {
+        display: none; 
+    }
+
+    .cena {
+        font-size: 1em;
+        color: #555;
+        text-align: left;
+    }
