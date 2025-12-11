@@ -9,12 +9,14 @@ body {
     padding: 1rem 2rem;
     background-color: #E5FFC7;
     color: #5D4B4B;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .logo {
     color: #5D4B4B;
     text-decoration: none;
     font-size: 1.5rem;
+    font-family:cursive;
 }
 
 .nav-button {

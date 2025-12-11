@@ -19,8 +19,10 @@
     top: 60px; /* Pod headerem */
     left: 0;
     width: 100%; /* Plná šířka */
-    background-color: #333;
+    background-color: #c6dbaf;
     z-index: 998;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
 }
 
 
@@ -68,6 +70,8 @@
 
     border-top: 1px solid #444;
     border-bottom: 1px solid #444;
+    background-color: #E5FFC7;
+
 }
 
 
@@ -91,7 +95,31 @@
     left: 0;
     width: 100%;
     padding: 10px;
-    background-color: #111;
+    background-color: #c6dbaf;
     box-sizing: border-box;
     z-index: 997; /* Nižší než menu */
+}
+.search-input {
+    /* Důležité: Řekne inputu, aby vyplnil zbývající prostor ve flex kontejneru */
+    flex-grow: 1; 
+    
+    /* Zajištění, že se input sám nezmenší pod minimální velikost */
+    min-width: 0; 
+    
+    /* Estetické úpravy */
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Odstraňte nebo zjemněte border-radius, pokud ho nechcete */
+    border-radius: 4px 0 0 4px; /* Rohy jen vlevo */
+}
+
+/* 3. Styly pro tlačítko Search */
+.search-submit {
+    /* Tlačítko si zachová svou fixní velikost */
+    padding: 10px 15px;
+    /* Odstraňte zbytečný margin */
+    margin-left: 0; 
+    /* Estetické úpravy */
+    border-radius: 0 4px 4px 0; /* Rohy jen vpravo */
+    /* ... ostatní styly pro barvu pozadí atd. ... */
 }
