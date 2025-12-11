@@ -448,7 +448,8 @@ aside.hero-image-container {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px; /* Maximální šířka formuláře */
-    width: 100%; /* Responzivní šířka */
+    width: 80%; /* Responzivní šířka */
+    display: block;
 }
 
 .confirmation-hidden {
@@ -476,7 +477,7 @@ input[type="tel"],
 input[type="date"],
 input[type="time"],
 select {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -491,7 +492,7 @@ select {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    width: 80%;
     transition: background-color 0.3s ease;
 }
 
