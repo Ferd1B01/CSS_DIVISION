@@ -4,7 +4,9 @@ html, body {
     width: 100%;    /* Zajistí, že obě zabírají celou šířku */
     height: 100%;
 }
-
+body {
+    background-color: #fce4e4;
+}
 .site-header {
     display: flex;
     justify-content: space-between; 
@@ -584,8 +586,9 @@ select {
 }
 
 .contact-container {
+    background-color: #fce4e4;
     max-width: 1000px;
-    margin: 30px auto;
+    margin: 10px auto;
     padding: 0 15px;
     display: grid;
     gap: 30px;
@@ -599,7 +602,8 @@ select {
 /* --- SEKCE 1: KONTAKTY --- */
 .contact-info {
     grid-area: info;
-    background: #fff;
+    background: #E5FFC7;
+    color: #333333;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -609,16 +613,9 @@ select {
     margin-bottom: 25px;
 }
 
-.info-block i {
-    color: #00796b;
-    font-size: 1.5em;
-    margin-right: 10px;
-    width: 25px;
-}
-
 .info-block h3 {
     display: inline-block;
-    color: #00796b;
+    color: #5D4B4B;
     margin: 0 0 5px 0;
 }
 
@@ -635,7 +632,7 @@ select {
 /* --- SEKCE 2: ORDINAČNÍ HODINY (TABULKA) --- */
 .opening-hours {
     grid-area: hours;
-    background: #fff;
+    background: #E5FFC7;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -650,17 +647,17 @@ select {
 .hours-table th, .hours-table td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #000000;
 }
 
 .hours-table th {
-    background-color: #e0f2f1; /* Světlejší teal pro hlavičku */
-    color: #004d40;
+    background-color: #fce4e4; /* Světlejší teal pro hlavičku */
+    color: #5D4B4B;
     font-weight: bold;
 }
 
 .hours-table tbody tr:hover {
-    background-color: #f0f7f9;
+    background-color: #dab3b3;
 }
 
 .vikend {
@@ -679,10 +676,10 @@ select {
 .social-links a {
     font-size: 2.5em;
     margin: 0 15px;
-    color: #00796b;
+    color: #646464;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #004d40;
+    color: #000000;
 }
