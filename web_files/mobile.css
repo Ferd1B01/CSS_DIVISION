@@ -1,3 +1,8 @@
+.cta-button {
+    font-size: 1rem;
+    width: 80%;
+}
+
 .site-header {
     /* Zajistí kompaktnější vzhled na mobilu */
     padding: 1rem; 
@@ -205,4 +210,8 @@ aside.hero-image-container {
 .reviews-grid {
     flex-direction: column; 
     gap: 20px;
+}
+
+.container {
+    padding: 20px 15px;
 }

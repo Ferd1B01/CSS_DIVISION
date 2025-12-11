@@ -242,6 +242,9 @@ aside.hero-image-container {
     border-radius: 50px;
     transition: background-color 0.3s;
     border: 2px solid #d1f7c0;
+    width: 30%;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .cta-button:hover {
@@ -437,4 +440,91 @@ aside.hero-image-container {
     font-weight: bold;
     color: #5D4B4B;
     font-size: 0.9rem;
+}
+
+.booking-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Maximální šířka formuláře */
+    width: 100%; /* Responzivní šířka */
+}
+
+.confirmation-hidden {
+    display: none;
+}
+.form-visible {
+    display: block;
+}
+
+/* Styly formuláře */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Zajišťuje, že padding a border nepřidávají k šířce */
+}
+
+.booking-submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.booking-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styly pro potvrzovací zprávu */
+.success-header {
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.details-text {
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.home-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #5a6268;
 }

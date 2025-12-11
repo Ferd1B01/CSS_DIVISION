@@ -50,6 +50,116 @@
 
         </div>
     </header>
+
+    <div class="booking-container">
+        <form id="bookingForm" class="form-visible">
+            <h2>Rezervační formulář</h2>
+
+            <div class="form-group">
+                <label for="jmeno">Jméno:</label>
+                <input type="text" id="jmeno" name="jmeno" required>
+            </div>
+            <div class="form-group">
+                <label for="prijmeni">Příjmení:</label>
+                <input type="text" id="prijmeni" name="prijmeni" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefon">Telefonní číslo:</label>
+                <input type="tel" id="telefon" name="telefon">
+            </div>
+
+            <div class="form-group">
+                <label for="sluzba">Vyberte službu:</label>
+                <select id="sluzba" name="sluzba" required>
+                    <option value="" disabled selected>-- Vyberte službu --</option>
+                    <option value="Konzultace">Preventivní péče</option>
+                    <option value="Masáž">Estetická stomatologie</option>
+                    <option value="Školení">Záchovná stomatologie</option>
+                    <option value="Oprava">Dětská stomatologie</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="datum">Datum:</label>
+                <input type="date" id="datum" name="datum" required>
+            </div>
+            <div class="form-group">
+                <label for="cas">Čas:</label>
+                <input type="time" id="cas" name="cas" required>
+            </div>
+
+            <button type="submit" class="booking-submit-btn">Odeslat rezervaci</button>
+        </form>
+
+        <div id="confirmationMessage" class="confirmation-hidden">
+            <h2 class="success-header">✅ Rezervace přijata!</h2>
+            <p id="reservationDetails" class="details-text"></p>
+            <a href="index.html" class="home-btn">Zpět na domovskou stránku</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <section class="footer-column footer-about">
+                <h3>Rainbow Clinic</h3>
+                <p>Poskytujeme komplexní a láskyplnou péči s individuálním přístupem. Vaše zdraví je naší prioritou.</p>
+                <address>
+                    <p>📍 Adresa: Náhodná 123, 100 00 Praha</p>
+                    <p>📞 Telefon: <a href="tel:+420123456789">+420 123 456 789</a></p>
+                    <p>📧 Email: <a href="mailto:info@rainbowclinic.cz">info@rainbowclinic.cz</a></p>
+                </address>
+            </section>
+
+            <section class="footer-column footer-links">
+                <h3>Rychlé odkazy</h3>
+                <ul>
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="#services">Služby a Specializace</a></li>
+                    <li><a href="cenik.html">Ceník</a></li>
+                    <li><a href="booking.html">Online Rezervace</a></li>
+                    <li><a href="reviews.html">Recenze</a></li>
+                    <li><a href="contacts.html">Kontakty</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-column footer-hours">
+                <h3>Ordinační hodiny</h3>
+                <ul class="hours-list">
+                    <li>Pondělí: <time>8:00</time> – <time>17:00</time></li>
+                    <li>Úterý: <time>8:00</time> – <time>17:00</time></li>
+                    <li>Středa: <time>8:00</time> – <time>17:00</time></li>
+                    <li>Čtvrtek: <time>8:00</time> – <time>17:00</time></li>
+                    <li>Pátek: <time>8:00</time> – <time>17:00</time></li>
+                </ul>
+            </section>
+
+            <section class="footer-column footer-social">
+                <h3>Sledujte nás</h3>
+                <div class="social-icons">
+                    <a href="facebook.com" aria-label="Facebook"><span class="icon-fb">FB</span></a>
+                    <a href="instagram.com" aria-label="Instagram"><span class="icon-ig">IG</span></a>
+                    <a href="linkedin.com" aria-label="LinkedIn"><span class="icon-li">LI</span></a>
+                </div>
+
+                <aside class="footer-legal">
+                    <h4>Právní informace</h4>
+                    <p><a href="https://wabiclinic.cz/wp-content/uploads/2024/10/3-Pouceni-o-zprac.-OU-Wabi-clinic-s.r.o-1-1.pdf">Ochrana osobních údajů</a></p>
+                    <p><a href="/terms">Obchodní podmínky</a></p>
+                </aside>
+            </section>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>2025 ČZU Studentský projekt. Autoři: Jan Adam, Patrik Brádler, Nikolas Kupka, Barbora Bambasová</p>
+        </div>
+    </footer>
 <script src="headerScript.js"></script>
+<script src="bookingScript.js"></script>
 </body>
 </html>
