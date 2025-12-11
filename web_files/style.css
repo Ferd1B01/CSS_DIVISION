@@ -459,6 +459,7 @@ aside.hero-image-container {
 }
 .form-visible {
     display: block;
+    color: #5D4B4B;
 }
 
 /* Styly formuláře */
@@ -470,7 +471,7 @@ aside.hero-image-container {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333;
+    color: #5D4B4B;
 }
 
 input[type="text"],
@@ -560,6 +561,7 @@ select {
     align-items: center;
     padding: 12px 0;
     font-size: 1.1em;
+    color: #5D4B4B;
 }
 
 .nazev {
