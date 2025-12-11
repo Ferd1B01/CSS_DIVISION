@@ -243,3 +243,26 @@ aside.hero-image-container {
         color: #555;
         text-align: left;
     }
+    .contact-container {
+        /* Přepnutí na jeden sloupec */
+        grid-template-areas: 
+            "info"
+            "hours"
+            "social";
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+    }
+    
+    .contact-info, .opening-hours {
+        padding: 20px;
+    }
+    
+    .hours-table th, .hours-table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .social-links a {
+        font-size: 2em;
+        margin: 0 10px;
+    }

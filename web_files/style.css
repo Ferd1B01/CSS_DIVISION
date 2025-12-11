@@ -581,3 +581,106 @@ select {
     height: 1px; /* Výška čáry */
 }
 
+.contact-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+    display: grid;
+    gap: 30px;
+    /* Rozvržení pro desktop: 3 sloupce (kontakty, hodiny, sociální sítě) */
+    grid-template-areas: 
+        "info hours hours"
+        "social social social";
+    grid-template-columns: 1fr 1.5fr; /* 1.5fr pro širší ordinační hodiny */
+}
+
+/* --- SEKCE 1: KONTAKTY --- */
+.contact-info {
+    grid-area: info;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-block i {
+    color: #00796b;
+    font-size: 1.5em;
+    margin-right: 10px;
+    width: 25px;
+}
+
+.info-block h3 {
+    display: inline-block;
+    color: #00796b;
+    margin: 0 0 5px 0;
+}
+
+.info-block a {
+    color: #333;
+    text-decoration: none;
+}
+
+.info-block a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- SEKCE 2: ORDINAČNÍ HODINY (TABULKA) --- */
+.opening-hours {
+    grid-area: hours;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.hours-table th, .hours-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.hours-table th {
+    background-color: #e0f2f1; /* Světlejší teal pro hlavičku */
+    color: #004d40;
+    font-weight: bold;
+}
+
+.hours-table tbody tr:hover {
+    background-color: #f0f7f9;
+}
+
+.vikend {
+    color: #888;
+    font-style: italic;
+}
+
+
+/* --- SEKCE 3: SOCIÁLNÍ SÍTĚ --- */
+.social-media {
+    grid-area: social;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links a {
+    font-size: 2.5em;
+    margin: 0 15px;
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #004d40;
+}
