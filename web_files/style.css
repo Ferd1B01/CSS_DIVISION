@@ -656,7 +656,7 @@ select {
     font-weight: bold;
 }
 
-.hours-table tbody tr:hover {-
+.hours-table tbody tr:hover {
     background-color: #dab3b3;
 }
 
