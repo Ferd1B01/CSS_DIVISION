@@ -683,3 +683,137 @@ select {
 .social-links a:hover {
     color: #000000;
 }
+
+.service-header {
+    background-color: #e0f2f1; /* Světle teal */
+    color: #004d40;
+    padding: 40px 20px;
+    margin: 0 -20px; /* Roztažení na šířku kontejneru */
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px;
+}
+
+.service-header h1 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.content-section {
+    padding-bottom: 50px;
+}
+
+/* --- Sekce Popisu --- */
+.description-block {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.description-block i {
+    font-size: 2.5em;
+    color: #00796b;
+    flex-shrink: 0; /* Ikona se nesmí zmenšit */
+    padding-top: 5px;
+}
+
+.description-text p {
+    line-height: 1.7;
+    font-size: 1.05em;
+    margin: 0;
+}
+
+.description-text p strong {
+    color: #004d40;
+}
+
+/* --- Seznam Služeb --- */
+.service-points h2 {
+    color: #00796b;
+    border-bottom: 2px solid #b2dfdb;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.service-points ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.service-points li {
+    background: #ffffff;
+    padding: 15px;
+    border-left: 4px solid #00796b;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.service-points li i {
+    color: #00796b;
+    margin-right: 10px;
+}
+
+
+/* --- Call to Action (Odkazy) --- */
+.cta-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 0;
+}
+
+.cta-section h2 {
+    color: #333;
+    border-bottom: none;
+    margin-bottom: 25px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-link i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.price-link {
+    background-color: #ff9800; /* Oranžová pro ceník */
+    color: #333;
+}
+
+.price-link:hover {
+    background-color: #f57c00;
+    transform: translateY(-2px);
+}
+
+.booking-link {
+    background-color: #00796b; /* Teal pro rezervaci */
+    color: white;
+}
+
+.booking-link:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}
