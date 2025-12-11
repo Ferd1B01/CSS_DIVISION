@@ -85,6 +85,14 @@
     z-index: 1000;
 }
 
+.search-icon {
+    height: 20px;
+}
+
+.hamburger-icon {
+    height: 20px;
+}
+
 /* Zobrazení search baru po kliknutí (okamžité) */
 .search-bar.is-open {
     display: flex; /* Okamžitě se zobrazí jako lišta */
