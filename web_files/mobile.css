@@ -295,3 +295,7 @@ aside.hero-image-container {
         margin: 0 auto;
         justify-content: center;
     }
+
+    .reviews-header h1 {
+        font-size: 2em;
+    }
