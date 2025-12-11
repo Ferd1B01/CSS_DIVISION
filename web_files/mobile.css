@@ -129,10 +129,72 @@
 }
 
 .footer-column {
-    flex: 1 1 100%; /* Plná šířka na mobilu */
+    flex: 1 1 100%; /* Každý sloupec zabírá celou šířku */
     margin-bottom: 30px;
 }
-    
+
+/* Odstranění spodního marginu u posledního sloupce pro čistý konec */
 .footer-column:last-child {
     margin-bottom: 0;
+}
+
+.hero-content-wrapper {
+    flex-direction: column; 
+    height: auto;
+}
+section.hero-text {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-header {
+    text-align: center;
+}
+
+.logo-image {
+    width:60%;
+}
+
+section.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+aside.hero-image-container {
+    min-height: 300px;
+}
+
+.trust-section {
+    padding: 50px 15px;
+}
+
+.trust-grid {
+    flex-direction: column; /* Na mobilu se sloupce seřadí pod sebe */
+    gap: 20px;
+}
+
+.trust-item {
+    flex: 1 1 100%; /* Každý pilíř zabere plnou šířku */
+}
+
+.trust-section h2 {
+    font-size: 1.8rem;
+}
+
+.services-section {
+    padding: 50px 15px;
+}
+.services-grid {
+    flex-direction: column; 
+    gap: 20px;
+}
+.service-card {
+    flex: 1 1 100%;
+}
+
+.reviews-section {
+    padding: 50px 15px;
+}
+.reviews-grid {
+    flex-direction: column; 
+    gap: 20px;
 }
